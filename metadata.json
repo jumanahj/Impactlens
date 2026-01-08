@@ -1,0 +1,5 @@
+{
+  "name": "ImpactLens - AI Dev Intelligence",
+  "description": "An AI-powered developer contribution intelligence platform that evaluates GitHub activity based on impact, complexity, and consistency using the Gemini API.",
+  "requestFramePermissions": []
+}
