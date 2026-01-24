@@ -1,41 +1,33 @@
+ImpactLens – Contribution Intelligence Platform
+ImpactLens is an AI-assisted platform that evaluates work based on actual impact rather than activity-based metrics. It integrates GitHub development data, manual work inputs, and AI-driven analysis to provide fair performance visibility across technical and operational roles.
 
-# 🚀 ImpactLens - Local Setup Instructions
+Problem Statement:
+Traditional metrics such as commit count and lines of code often misrepresent real contribution value. High-impact work can go unnoticed, while low-value activity appears productive. ImpactLens addresses this by combining code metadata analysis with AI-assisted insights.
 
-Follow these steps to get the platform running on your local machine in under 2 minutes.
+Key Features:
+   -> GitHub REST API integration for fetching commit metadata
+   -> AI-assisted analysis using Gemini API to identify high-impact work
+   -> Support for technical and non-technical contributions
+   -> Attendance and manual work reporting
+   -> Impact vs Visibility data visualization
+   -> Role-based dashboards
 
-### 1. Prerequisites
-- **Node.js** (v18 or higher) installed on your system.
+System Overview:
+The system links teams to a GitHub repository, collects contribution data through APIs and manual inputs, analyzes commit context using AI, and visualizes insights through interactive charts.
 
-### 2. Installation
-1. Extract the ZIP file into a folder.
-2. Open your terminal (Command Prompt, PowerShell, or Terminal) in that folder.
-3. Run the following command to install the development server:
-   ```bash
-   npm install
-   ```
+Tech Stack:
+   Frontend: React.js, Tailwind CSS
+   APIs: GitHub REST API, Google Gemini API
+   Visualization: Recharts
+   Networking: Axios
+   Storage: MySQL
 
-### 3. Set your API Key
-The app uses Google Gemini for code analysis. You need an API key from [Google AI Studio](https://aistudio.google.com/).
-- **Option A (Temporary):** Open `vite.config.ts` and replace `'YOUR_API_KEY_HERE'` with your actual key.
-- **Option B (Recommended):** Set an environment variable in your terminal before starting:
-  ```bash
-  # Windows (PowerShell)
-  $env:API_KEY="your_key_here"; npm run dev
-  
-  # Mac/Linux
-  export API_KEY="your_key_here" && npm run dev
-  ```
+Limitations:
+   -> Limited to GitHub as the data source
+   -> LocalStorage-based persistence
+   -> AI analysis restricted to commit metadata
 
-### 4. Start the App
-Run this command:
-```bash
-npm run dev
-```
-The app will automatically open in your browser at `http://localhost:5173`.
-
-### 5. Demo Flow
-1. **Login** as **Alice Director**.
-2. **Create a Team**: Enter `facebook/react`.
-3. **Map Users**: Ensure "Charlie Dev" has the GitHub username `charlie_code`.
-4. **Login** as **Bob Manager**.
-5. **Sync Data**: Click "Demo Data" to see the "Silent Architect" logic in action immediately!
+Future Scope:
+   -> Full pull request and source code analysis
+   -> Integration with project management tools
+   -> Cloud-based backend support
